@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:sws="http://www.springframework.org/schema/web-services"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services-2.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">  
+       
+        <context:property-placeholder location="/WEB-INF/jdbc.properties" />
+       
+       <context:component-scan base-package="com" />  
+          
+       
+       <sws:annotation-driven />  
+       
+       
+       
+       <bean id="ObjetoService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition" lazy-init="true">  
+      <property name="schemaCollection">  
+        <bean class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">  
+          <property name="inline" value="true" />  
+          <property name="xsds">  
+            <list>  
+               <value>schemas/nuevaOperacion.xsd</value>
+            </list>  
+          </property>  
+        </bean>  
+      </property>  
+     <property name="portTypeName" value="ObjetoService"/>  
+      <property name="serviceName" value="ObjetoService" />  
+      <property name="locationUri" value="/endpoints"/>  
+    </bean>  
+    
+       
+         
+    
+   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.databaseurl}"/>
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}"/>
+         
+    </bean>
+  <!--  
+  
+   <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan">
+            <list>
+                <value>com.websystique.spring.model</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql:false}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql:false}</prop>
+            </props>
+        </property>       
+    </bean>
+ -->
+  
+  
+</beans>

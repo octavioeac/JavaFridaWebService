@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0"
+xmlns:Q1="http://www.springhibernate.com/tipos"
+ targetNamespace="http://www.springhibernate.com/tipos"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="objetoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cadena" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+
+<xs:complexType name="objeto">
+    <xs:sequence>
+      <xs:element name="param1" type="xs:string"/>
+      <xs:element name="param2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="objetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="objeto" type="Q1:objeto"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

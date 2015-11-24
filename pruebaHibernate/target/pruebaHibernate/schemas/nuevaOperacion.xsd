@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:Q1="http://www.springwssample.org/types"
+targetNamespace="http://www.springwssample.org/types" >
+
+<xs:element name="nuevoObjetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="raiz" type="Q1:objetoRaiz"/>
+      </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+    
+  <xs:complexType name="objetoRaiz">
+    <xs:sequence>
+      <xs:element name="hijo" type="Q1:hijos" maxOccurs="unbounded"/>
+      <xs:element name="propiedad" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="hijos">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="apellido" type="xs:string"/>
+      <xs:element name="nieto" type="Q1:nietos" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nietos">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="apellido" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+   <xs:complexType name="gente">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="dire" type="Q1:direccion"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="direccion">
+    <xs:sequence>
+      <xs:element name="calle" type="xs:string"/>
+      <xs:element name="colonia" type="xs:string"/>
+      <xs:element name="cp" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+   <xs:element name="nuevoObjetoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="gen" type="Q1:gente"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  
+  
+  
+</xs:schema>
+

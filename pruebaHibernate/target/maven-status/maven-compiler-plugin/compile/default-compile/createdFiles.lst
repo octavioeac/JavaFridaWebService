@@ -1,0 +1,13 @@
+com\jesuslc\contact\User.class
+com\frida\NuevoObjetoRequest.class
+com\frida\Direccion.class
+com\frida\ObjetoRaiz.class
+com\frida\Gente.class
+com\frida\Hijos.class
+com\frida\PruebaEndpoint.class
+com\frida\Persona.class
+com\frida\GetObjetoReponse.class
+com\frida\NuevoObjetoResponse.class
+com\frida\Saludo.class
+com\frida\Nietos.class
+com\frida\GetObjetoRequest.class
