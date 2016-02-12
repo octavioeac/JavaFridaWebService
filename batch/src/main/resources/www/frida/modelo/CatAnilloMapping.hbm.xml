@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/01/2016 05:21:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="www.frida.modelo.CatAnillo" table="cat_anillo">
+        <id name="idNodo" type="java.lang.String">
+            <column name="id_nodo" />
+            <generator class="assigned" />
+        </id>
+          <property name="movimiento" type="java.lang.String">
+            <column name="movimiento" />
+        </property>
+        <property name="clliCentral" type="java.lang.String">
+            <column name="clli_central" />
+        </property>
+        <property name="ubiNodoAdm" type="java.lang.String">
+            <column name="ubi_nodo_adm" />
+        </property>
+        <property name="clliEquipo" type="java.lang.String">
+            <column name="clli_equipo" />
+        </property>
+        <property name="anillo" type="java.lang.String">
+            <column name="anillo" />
+        </property>
+        <property name="repadmConxadsl" type="java.lang.String">
+            <column name="repadm_conxadsl" />
+        </property>
+        <property name="division" type="java.lang.String">
+            <column name="DIVISION" />
+        </property>
+        <property name="tipoCluster" type="java.lang.String">
+            <column name="tipo_cluster" />
+        </property>
+        <property name="ospf" type="java.lang.String">
+            <column name="ospf" />
+        </property>
+        <property name="repisa" type="java.lang.String">
+            <column name="repisa" />
+        </property>
+        <property name="ipSistema" type="java.lang.String">
+            <column name="ip_sistema" />
+        </property>
+        <property name="ipGestion" type="java.lang.String">
+            <column name="ip_gestion" />
+        </property>
+        <property name="estatusCns" type="java.lang.String">
+            <column name="estatus_cns" />
+        </property>
+        <property name="fechaEstatusCns" type="java.sql.Date">
+            <column name="fecha_estatus_cns" />
+        </property>
+        <property name="numOtFrida" type="java.lang.String">
+            <column name="num_ot_frida" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="observaciones" />
+        </property>
+        <property name="versionNodo" type="java.lang.String">
+            <column name="version_nodo" />
+        </property>
+        <property name="switchRcdt" type="java.lang.String">
+            <column name="switch_rcdt" />
+        </property>
+        <property name="ptoRcdt" type="java.lang.String">
+            <column name="pto_rcdt" />
+        </property>
+        <property name="fechaAlta" type="java.sql.Date">
+            <column name="fecha_alta" />
+        </property>
+        <property name="proveedorTx" type="java.lang.String">
+            <column name="proveedor_tx" />
+        </property>
+    </class>
+</hibernate-mapping>

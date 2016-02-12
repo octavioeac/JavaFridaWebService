@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/02/2016 06:45:53 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="www.frida.modelo.admfridaarm" table="adm_frida_arm">
+        <id name="Id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        
+        <property name="idOtTrabajo" type="java.lang.String">
+            <column name="id_ot_trabajo" />
+        </property>
+        <property name="nomElement" type="java.lang.String">
+            <column name="nom_element" />
+        </property>
+        <property name="idElementoArm" type="java.lang.String">
+            <column name="id_elemento_arm" />
+        </property>
+        <property name="estatuArm" type="java.lang.String">
+            <column name="estatu_arm" />
+        </property>
+        <property name="estatusCns" type="java.lang.String">
+            <column name="estatus_cns" />
+        </property>
+    </class>
+</hibernate-mapping>

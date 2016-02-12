@@ -1,0 +1,298 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.frida.batch</groupId>
+  <artifactId>batch</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>batch Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+     <springframework.version>3.0.5.RELEASE</springframework.version>
+       <spring.batch.version>3.0.4.RELEASE</spring.batch.version>
+     	<hibernate.version>5.0.4.Final</hibernate.version>
+  </properties>
+  
+  
+  <dependencies>
+  <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>3.0.5.RELEASE</version>
+	</dependency>
+  
+     <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+  
+    <dependency>
+        <groupId>org.springframework.batch</groupId>
+        <artifactId>spring-batch-core</artifactId>
+        <version>${spring.batch.version}</version>
+    </dependency>
+      
+        <dependency>
+        <groupId>org.springframework.batch</groupId>
+        <artifactId>spring-batch-infrastructure</artifactId>
+        <version>${spring.batch.version}</version>
+    </dependency>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- Dependencias de IBM BROKER -->
+      
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.commonservices</artifactId>
+	<version>7.1.0.3 </version>
+    </dependency>
+
+      
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.connector</artifactId>
+	<version>7.1.0.3 </version>
+    </dependency>  
+      
+           
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.headers</artifactId>
+	<version>7.1.0.3 </version>
+    </dependency>  
+     
+     
+             
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq</artifactId>
+	<version>7.1.0.3 </version>
+     </dependency>  
+       
+                
+               
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.jmqi</artifactId>
+	<version>7.1.0.3 </version>
+     </dependency>  
+       
+          
+             
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.jmqi.local</artifactId>
+	<version>7.1.0.3 </version>
+     </dependency>  
+     
+                
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.jmqi.remote</artifactId>
+	<version>7.1.0.3 </version>
+     </dependency>  
+       
+       
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.jmqi.system</artifactId>
+	<version>7.1.0.3 </version>
+     </dependency>  
+         
+        
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.jms.admin</artifactId>
+	<version>7.1.0.3 </version>
+     </dependency>  
+     
+     
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mq.pcf</artifactId>
+	<version>7.1.0.3</version>
+     </dependency>  
+        
+                        
+         
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.mqjms</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+     
+     
+     
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.commonservices</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.commonservices.j2se</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+     
+    <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.jms.internal</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+     
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.jms</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+     
+     
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.matchspace</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+     
+     
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.provider</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+       
+      
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.ref</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+       <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.wmq.common</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+      
+      
+       <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.wmq.factories</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+     
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.wmq</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+  
+  
+      
+   
+      
+      
+      
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>com.ibm.msg.client.wmq.v6</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+        
+      
+      <dependency>
+	<groupId>com.ibm</groupId>
+	<artifactId>dhbcore</artifactId>
+	<version>7.1.0.3</version>
+     </dependency> 
+      
+   <!-- BROKER FIN -->
+     <dependency>
+	<groupId>javax.jms</groupId>
+	<artifactId>jms</artifactId>
+	<version>1.1</version>
+    </dependency> 
+    
+    <dependency>
+	<groupId>javax.ws.rs</groupId>
+	<artifactId>javax.ws.rs-api</artifactId>
+	<version>2.0</version>
+</dependency>
+    
+  
+			<dependency>
+	<groupId>com.sun.xml.bind</groupId>
+	<artifactId>jaxb-impl</artifactId>
+	<version> 2.2.10</version>
+</dependency>
+			<dependency>
+	<groupId>com.sun.xml.bind</groupId>
+	<artifactId>jaxb-core</artifactId>
+	<version>2.2.11</version>
+</dependency>  
+       
+    <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.0.1</version>
+    <scope>provided</scope>
+ </dependency>
+       
+<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>5.1.37</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-simple</artifactId>
+    	<version>1.7.5</version>
+    </dependency>
+    <dependency>
+    	<groupId>javax.transaction</groupId>
+    	<artifactId>jta</artifactId>
+    	<version>1.1</version>
+    </dependency>
+    
+    
+    
+  </dependencies>
+  <build>
+    <finalName>batch</finalName>
+       <plugins>
+    <plugin>
+    	<groupId>org.apache.maven.plugins</groupId>
+    	<artifactId>maven-compiler-plugin</artifactId>
+    	<version>2.3.2</version>
+    	<configuration>
+    	<source>1.7</source>
+    	<target>1.7</target>
+    	</configuration>
+    </plugin>
+    </plugins>
+    
+  </build>
+</project>
